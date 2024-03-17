@@ -1,0 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+.head {
+    background-image: url('./../../assets/images.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
