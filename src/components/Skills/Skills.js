@@ -1,8 +1,17 @@
 import React from "react";
 import "./Skills.css";
 import Box from '@mui/material/Box';
-import BorderLinearProgress from "../ProgressBar/ProgressBar";
+import BorderLinearProgress from "../../shared/ProgressBar/ProgressBar";
+
 const Skills = () => {
+  const skills = [
+  { id: 1, name: "NodeJs" , progress: 75 }, 
+  { id: 2, name: "Angular" , progress : 80},
+  { id: 2, name: "ReactJs" , progress : 90 },
+  { id: 2, name: "Js" , progress : 90},
+  { id: 2, name: "Mongo" , progress : 85 },
+];
+
   return (
     <section className="skills-section  w-100 px-5 py-5 d-flex flex-column justify-content-between align-items-center">
       <div className="top-part d-flex flex-column justify-content-between align-items-center">
@@ -21,22 +30,16 @@ const Skills = () => {
         <div className="my-focus-div">
           <p className="my-focus-p">My Focus</p>
           <ul>
-            <li>Nodejs</li>
-        <Box sx={{ flexGrow: 1 }}>
-          <BorderLinearProgress variant="determinate" value={75} />
-        </Box>
-            <li>Reactjs</li>
-        <Box sx={{ flexGrow: 1 }}>
-          <BorderLinearProgress variant="determinate" value={80} />
-        </Box>
-            <li>Angular</li>
-        <Box sx={{ flexGrow: 1 }}>
-          <BorderLinearProgress variant="determinate" value={85} />
-        </Box>
-            <li>BootStrap</li>
-        <Box sx={{ flexGrow: 1 }}>
-          <BorderLinearProgress variant="determinate" value={75} />
-        </Box>
+            {skills.map((e) => (
+              <li key={e.id}>
+                <Box sx={{ flexGrow: 1 }}>
+                  <BorderLinearProgress 
+                  variant="determinate" 
+                  value={e.progress} 
+                  skillName={e.name} />
+                </Box>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

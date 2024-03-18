@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonPrime from "../Button/Button";
+import ButtonPrime from "../../shared/Button/Button";
 import "./About.css";
 
 const About = () => {
@@ -21,7 +21,9 @@ const About = () => {
           </p>
           <a href="../../assets/file.txt" download>
             <ButtonPrime
+              variant={"contained"}
               buttonContent={"Download Resume"}
+              backgroundColor={'prime'}
               className="resume-btn mt-4"
             />
           </a>

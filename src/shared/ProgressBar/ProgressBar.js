@@ -1,5 +1,6 @@
 
 import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
@@ -14,6 +15,14 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 
-export default BorderLinearProgress;
+
+export default function CustomizedProgressBars(props) {
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <label>{props.skillName}</label>
+      <BorderLinearProgress variant="determinate" value={props.value} />
+    </Box>
+  );
+}
 
 

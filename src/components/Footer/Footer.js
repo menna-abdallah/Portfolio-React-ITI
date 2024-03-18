@@ -1,9 +1,9 @@
 import React from "react";
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope ,faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faLinkedin, faGithub  } from "@fortawesome/free-brands-svg-icons";
+import ButtonPrime from "../../shared/Button/Button";
 
 function Footer() {
   return (
@@ -23,9 +23,12 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <div class="col middleside text-center d-flex align-items-center justify-content-center">
-            <span class="border border-light p-2 w-50">CONTACT ME</span>
-        </div>
+      <ButtonPrime
+              variant={"outlined"}
+              buttonContent={"Connect ME"}
+              backgroundColor={'#220024'}
+              className="resume-btn mt-4"
+            />
       <div className="left-part w-25">
         <ul>
           <li>

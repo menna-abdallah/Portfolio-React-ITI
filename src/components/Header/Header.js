@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonPrime from "../Button/Button";
+import ButtonPrime from "../../shared/Button/Button";
 import PersonalImage from "./../../assets/menna.jpg";
 import "./Header.css";
 
@@ -14,7 +14,11 @@ const Header = () => {
             <h1>I'm</h1>
             <h1 className="mb-3">Menna Abdallah</h1>
             <h4 className="mb-3">Software Engineer</h4>
-            <ButtonPrime buttonContent={"Explore More"} className="contact-btn" />
+            <ButtonPrime 
+            variant={"contained"}
+            buttonContent={"Explore More"} 
+            backgroundColor={'prime'} 
+            className="contact-btn" />
           </div>
         </div>
       </div>
